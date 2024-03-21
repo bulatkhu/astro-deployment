@@ -3,13 +3,18 @@ import React, {useState} from "react"
 function Navbar() {
     const [counter, setCounter] = useState(0);
 
-    return <div>
-        <nav>
-            <h2>Navbar</h2>
-        </nav>
-        <p>Counter <span>{}</span></p>
-        <button>Add</button>
-    </div>
+    return (
+        <div className="bg-white">
+            <nav>
+                <h2>Navbar</h2>
+            </nav>
+            <p>Counter <span>{counter}</span></p>
+            <div>
+                <button onClick={() => setCounter(counter => counter + 1)}>Add</button>
+                <button onClick={() => setCounter(counter => counter - 1)}>Sub</button>
+            </div>
+        </div>
+    )
 }
 
 export default Navbar

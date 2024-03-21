@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Navbar from "./components/Navbar";
+import Navbar from "../pages/components/Navbar";
 ---
 
 <Layout title="Welcome to Astro.">
-	<Navbar/>
+	<Navbar client:load/>
 	<main>
 		<svg
 			class="astro-a"
