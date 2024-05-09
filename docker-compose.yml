@@ -1,5 +1,6 @@
 services:
   astro-client:
+    container_name: test-astro-client
     build:
       context: .
       dockerfile: Dockerfile
