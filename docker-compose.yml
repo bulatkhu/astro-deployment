@@ -1,7 +1,7 @@
 services:
   astro-client:
     build:
-      context: ./client
+      context: .
       dockerfile: Dockerfile
 #    expose:
 #      - 3000
