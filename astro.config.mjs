@@ -2,9 +2,14 @@ import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
 import tailwind from '@astrojs/tailwind';
 
+import node from "@astrojs/node";
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://bulatkhu.github.io', // Use to generate your sitemap and canonical URLs in your final build.
+  output: 'server',
   base: 'astro-deployment',
-  integrations: [react(), tailwind()]
+  integrations: [react(), tailwind()],
+  adapter: node({
+    mode: "standalone"
+  })
 });
