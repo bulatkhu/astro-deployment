@@ -16,3 +16,7 @@ services:
 #      - ./client/public:/srv/app/client/public
     networks:
       - proxy
+networks:
+  proxy:
+    name: proxy
+    external: true
