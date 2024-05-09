@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from "../pages/components/Navbar";
+import UsersList, {UserType} from "../partials/users-list";
+
+const users = await fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json()) as UserType[]
+---
+
+<Layout title="Welcome to Astro.">
+  <Navbar client:load />
+  <div class="container m-auto">
+      <a class="block mb-6" href="/">Go Back</a>
+      <div class="text-white">
+          <h1 class="text-white">Users: </h1>
+          <UsersList client:idle users={users} />
+      </div>
+  </div>
+</Layout>
