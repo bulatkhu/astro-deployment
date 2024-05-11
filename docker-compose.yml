@@ -10,7 +10,7 @@ services:
 #      - 3000:3000
     labels:
       - traefik.enable=true
-      - traefik.http.routers.to-astro-client.entrypoints=websecure
+      - traefik.http.routers.to-astro-client.entrypoints=web
       - traefik.http.routers.to-astro-client.rule=Host(`astro-client.mypublicserver.duckdns.org`)
 #    volumes:
 #      - ./client/src:/srv/app/client/src
